@@ -1,7 +1,7 @@
 resource "aws_instance" "demo" {
-  ami           = "ami-0cf0e376c672104d6"
+  ami           = var.aws_ami
   instance_type = "t2.micro"
-  tags = {
+  tags          = {
     Name = "terraform-demo"
   }
 }
